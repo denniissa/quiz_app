@@ -1,21 +1,29 @@
 import './index.css'
+import Navbar from './components/Navbar'
 import Quiz from './components/Quiz'
-import Results from './components/Results'
+import Home from './components/Home'
+import Lessons from './components/Lessons'
+import LogIn from './components/LogIn'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Footer from './components/Footer'
 
 function App() {
-
   return (
-    <>
-    <nav className="bg-gradient-to-r from-teal-500 to-teal-700 text-white shadow-md p-4">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Quiz App</h1>      
-        </div>
-    </nav>  
-
-      <Quiz /> 
-          
-    </>
-  )
+    <BrowserRouter>
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-grow">
+          <Routes>          
+            <Route path="/" element={<Home />} />
+            <Route path="/quiz" element={<Quiz />} />
+            <Route path="/lessons" element={<Lessons />} />
+            <Route path="/login" element={<LogIn />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

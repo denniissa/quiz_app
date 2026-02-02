@@ -3,21 +3,36 @@ import Results from "./Results";
 
 function Quiz() {
     const questionBank = [
-        {
-            question: "How are you?",
-            options: ["Sad", "Happy", "Angry"],
-            answer: "Happy",
-        },
-        {
-            question: "How is him?",
-            options: ["Sad", "Happy", "Angry"],
-            answer: "Happy",
-        },
-        {
-            question: "How are you?",
-            options: ["Sad", "Happy", "Angry"],
-            answer: "Happy",
-        },
+       {
+    question: "What is React?",
+    options: ["A library", "A database", "A browser"],
+    answer: "A library",
+},
+{
+    question: "Who developed React?",
+    options: ["Google", "Facebook", "Microsoft"],
+    answer: "Facebook",
+},
+{
+    question: "What are the building blocks of React?",
+    options: ["Elements", "Components", "Functions"],
+    answer: "Components",
+},
+{
+    question: "Which hook is used for state management?",
+    options: ["useEffect", "useContext", "useState"],
+    answer: "useState",
+},
+{
+    question: "What is the name of the syntax used in React?",
+    options: ["JSX", "HTML5", "JavaScript+"],
+    answer: "JSX",
+},
+{
+    question: "How do you pass data to a component?",
+    options: ["Using links", "Using props", "Using states"],
+    answer: "Using props",
+}
     ];
 
     const initialAnswers = [null, null, null];
@@ -66,7 +81,7 @@ function Quiz() {
     return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-blue-100 p-6">
             <div className="w-full max-w-xl bg-white shadow-xl rounded-xl p-10">
-                <h2 className="text-2xl font-bold text-center mb-6 text-teal-700">
+                <h2 className="text-2xl font-bold text-center mb-6 text-blue-700">
                     Question {currentQuestion + 1} of {questionBank.length}
                 </h2>
                 <p className="text-lg text-center mb-5">

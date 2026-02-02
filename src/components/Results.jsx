@@ -13,7 +13,7 @@ function Results({userAnswers, questionBank, restartQuiz}) {
      return (
         <div className="flex items-center justify-center min-h-screen bg-blue-200 px-4">
             <div className="w-full max-w-xl bg-white shadow-xl rounded-xl p-10 sm:">
-            <h2 className="text-center text-2xl font-bold text-teal-700 p-4" >Quiz completed!</h2>
+            <h2 className="text-center text-2xl font-bold text-blue-900 p-4" >Quiz completed!</h2>
             <p className="text-center p-4 font-bold mt-8">Your score: {score}/{questionBank.length}</p>
             <div className="text-center my-6">
             <button className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white rounded-xl p-2 font-bold  " onClick={restartQuiz}>
