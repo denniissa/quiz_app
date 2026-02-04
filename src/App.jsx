@@ -6,6 +6,7 @@ import Lessons from './components/Lessons'
 import LogIn from './components/LogIn'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Footer from './components/Footer'
+import Signup from './components/Signup'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/quiz" element={<Quiz />} />
             <Route path="/lessons" element={<Lessons />} />
             <Route path="/login" element={<LogIn />} />
+            <Route path="/signup" element={<Signup />} />
           </Routes>
         </main>
         <Footer />
